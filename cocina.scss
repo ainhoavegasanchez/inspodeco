@@ -234,13 +234,15 @@ input#btnEnviar {
 
 #buscador {
   position: absolute;
-  right: 31%;
+  width: 100%;
+  display: flex;
   top: 178px;
   z-index: 1;
+  justify-content: center;
   & img {
     width: 25px;
     position: absolute;
-    right: 10px;
+    right: 34%;
     bottom: 12%;
     &:hover {
       cursor: pointer;
@@ -415,7 +417,7 @@ footer {
     top: 330px;
     width: 40%;
     & img {
-      left: 95%;
+      left: 87%;
       bottom: 20%;
     }
     & input {
