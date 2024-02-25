@@ -1,0 +1,473 @@
+$verde: #698770;
+$fonfo_nav: #74ab9eca;
+$fondo_texto: #d7c1a2;
+$formulario:rgb(237 98 33);
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+$texto: "DM Serif Display", serif;
+$titulo: "Vollkorn SC", serif;
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+nav {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  background-color: $fonfo_nav;
+  width: 100vw;
+  height: 82px;
+}
+header {
+  height: 300px;
+}
+#burger {
+  position: absolute;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  right: 7%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  margin-top: 4%;
+  justify-content: space-between;
+}
+#burger > span {
+  height: 2px;
+  background-color: #000;
+  transition: 0.5s;
+  font-size: 1rem;
+}
+#menyAvPaa {  display: none;}
+#meny {
+  background: #457367ac;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: height 0.5s ease;
+  color: white;
+  text-align: center;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "DM Serif Display", serif;
+}
+a li, a p {  padding: 6px;}
+#meny p:hover, #meny #categorias:hover {
+  background-color: #f58d4dc1;
+  cursor: pointer;
+  border-radius: 10px 10px 0 10px;
+}
+#categorias {  padding: 4px;}
+#menyAvPaa:checked ~ #meny {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 82px;
+}
+#menyAvPaa:checked ~ #burger > span {  background-color: #fff;}
+#menyAvPaa:checked ~ #burger > span:nth-child(1) {  transform: translateY(8px) rotate(45deg);}
+#menyAvPaa:checked ~ #burger > span:nth-child(2) {  opacity: 0;}
+#menyAvPaa:checked ~ #burger > span:nth-child(3) {  transform: translateY(-14px) rotate(-45deg);}
+#lista {
+  display: none;
+  list-style: none;
+  justify-items: center;
+  gap: 5px;
+  background-color: rgb(255 255 255 / 48%);
+  border-radius: 8px;
+}
+.lista1024 {
+  display: none;
+  font-family: "DM Serif Display", serif;
+}
+//fondo del nav
+#fondo {
+  width: 98vw;
+  height: 300px;
+  position: absolute;
+}
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & img {
+    width: 20%;
+    margin: 10px 0x;
+  }
+  &  h1 {
+    font-family: "Vollkorn SC", serif;
+    font-size: 2rem;
+  }
+}
+#subscribeBtn {
+  margin-left: 20px;
+  width: 40px;
+  &:hover {    cursor: pointer;  }
+}
+//formulario
+#formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+}
+.subscription-form {
+  width: 97vw;
+  position: fixed;
+  top: 280px;
+  transform: translateY(-50%);
+  background-color: $formulario;
+  transition: left 0.3s ease-in-out;
+  padding: 31px 58px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: none;
+  z-index: 1000;
+  & form {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  & h2 {
+    margin: 10px 0;
+    text-align: center;
+  }
+  & #registro {
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    &:hover {      text-decoration: underline white;    }
+  }
+}
+#cerrar {  display: none;}
+#label-cerrar {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: underline;
+  cursor: pointer;
+}
+input {
+  border-radius: 10px;
+  border-style: none;
+  padding: 10px;
+}
+input#btnEnviar {
+  width: 200px;
+  margin: auto;
+  padding: 10px 0;
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+}
+#label-cerrar:hover {  color: white;}
+//main
+.categorias {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  background-image: url("./img_index/fondo.webp");
+  padding: 20px;
+  background-size: 100%;
+  & > p {
+    border-radius: 10px;
+    background-color: rgb(255, 85, 0);
+    color: white;
+    text-align: center;
+    padding: 2px 30px;
+  }
+}
+//categorias
+.categoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54vw;
+  min-width: 266px;
+  max-width: 266px;
+  height: 23vh;
+  margin: 20px;
+  border-radius: 32px;
+  color: black;
+  font-weight: bold;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &:hover {
+    cursor: pointer;
+    font-size: 2rem;
+    & > p {
+      width: 100%;
+      text-align: center;
+      color: white;
+      background-color: #3734349d;
+      font-family: "Vollkorn SC", serif;
+    }
+  }
+}
+#baño {  background-image: url("./img_index/baño.webp");}
+#cocina {  background-image: url("./img_index/cocina.webp");}
+#dormitorio {  background-image: url("./img_index/dormitorio.webp");}
+#despacho {  background-image: url("./img_index/despacho.webp");}
+#terraza {  background-image: url("./img_index/terrazaq.webp");}
+#salon {  background-image: url("./img_index/salon.webp");}
+#texto {
+  background-color: $fondo_texto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  & p {
+    margin: 30px;
+    font-family: "DM Serif Display", serif;
+    font-size: 1rem;
+  }
+  & img {   
+    width: 50vw;
+    border-radius: 10px;  }
+}
+.collage {  margin-bottom: 30px;
+  &  p {
+    text-align: right;
+    margin-top: 60px;
+    font-size: 2rem;
+    padding-right: 20px;
+    font-family: "Vollkorn SC", serif;
+    font-weight: bold;
+  }
+  &  img {    width: 97vw;  }
+}
+#img1024 {  display: none;}
+//descripcion
+.descripcion {
+  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
+  background-image: url("./img_index/fondo-naranja-3.webp");
+  font-family: "DM Serif Text", serif;
+  & div img {
+    width: 20%;
+    margin-bottom: 20px;
+  } 
+  &  div {
+    padding: 30px;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+  }
+  &  h2 {
+    padding-top: 40px;
+    text-align: center;
+    font-family: "Vollkorn SC", serif;
+  }
+  & h3 {
+    margin-bottom: 5px;
+  }
+}
+footer {
+  padding-top: 10px;
+  background-color: $verde;
+  display: flex;
+  flex-direction: column;
+  & > p {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin: 12px 0;
+  }
+  & > div {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.info {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+}
+.contacto {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  & img {
+    width: 30px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+ .tipos {    display: grid;  }
+/************************************/
+@media (min-width: 600px) {
+  #fondo {
+    height: 70vh;
+  }
+  header {
+    height: 70vh;
+  }
+  #burger {
+    display: none;
+  }
+  #menyAvPaa:checked ~ #meny,
+  #meny {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    height: 8vh;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    color: white;
+    position: fixed;
+  }
+  .subscription-form {
+    z-index: 1000;
+    top: 267px;
+    width: 53vw;
+    & form #btnEnviar {
+      margin: 10px auto 0;
+    }
+  }
+  .titulo img {
+    width: 70px;
+  }
+  #meny {
+    position: fixed;
+    top: 82px;
+    height: 53px;
+  }
+  .categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    & a {
+      width: 30%;
+    }
+  }
+  .categoria {
+    max-width: 30%;
+    min-width: 100%;
+    height: 20vh;
+    margin: 20px 0;
+    &:hover p {
+      font-size: 1.5rem;
+    }
+  }
+  .tipos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .texto {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+  .lista1024 {
+    padding: 0 20px;
+    position: fixed;
+    width: 75vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    height: 60px;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    color: white;
+    z-index: 999;
+    font-size: 1.2rem;
+    top: 130px;
+    justify-content: space-around;
+    margin-left: 13%;
+    background-color: #85a9a0b5;
+    & a p:hover {
+      background-color: rgba(245, 141, 77, 0.7568627451);
+      border-radius: 10px 10px 0 10px;
+    }
+  }
+}
+
+/************************************/
+
+@media (min-width: 1024px) {
+  .titulo h1 {   font-size: 4rem;  }
+  #categorias {    display: flex;  }
+  .categorias a {    width: 15%;  }
+  .categoria {
+    max-width: 10%;
+    min-width: 100%;
+    height: 20vh;
+    margin: 20px 0;
+    &:hover p {
+      font-size: 1.5rem;
+    }
+  }
+  #texto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    & img {
+      width: 80%;
+    }
+  }
+  .tipos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .subscription-form {
+    width: 500px;
+    top: 328px;
+  }
+  #normal {display: none;  }
+  #img1024 {
+    display: flex;
+    height: 52vh;
+  }
+    .descripcion div {grid-template-columns: 1fr 1fr 1fr 1fr;  }
+  .arquitectura {order: 1; }
+  .construccion {order: 4; }
+  .cocina {order: 2;  }
+  .smart {order: 3;  }
+  .collage p{ font-size: 4rem;  }
+  .info a p {font-size: 1.5rem;  }
+  #menyAvPaa:checked ~ #meny {margin: 0;  }
+  .titulo img { width: 100px;  }
+  nav { height: 125px;}
+  #meny { top: 125px;}
+  .lista1024 {top: 178px;}
+}

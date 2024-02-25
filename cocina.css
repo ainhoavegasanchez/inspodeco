@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  background-color: rgba(116, 171, 158, 0.7921568627);
+  width: 100vw;
+  height: 82px;
+  z-index: 1000;
+}
+
+header {
+  height: 300px;
+}
+
+#burger {
+  position: absolute;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  margin-top: 4%;
+  justify-content: space-between;
+}
+
+#burger > span {
+  height: 2px;
+  background-color: #000;
+  transition: 0.5s;
+  font-size: 1rem;
+}
+
+#menyAvPaa {
+  display: none;
+}
+
+#meny {
+  background: rgba(69, 115, 103, 0.6745098039);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: height 0.5s ease;
+  color: white;
+  text-align: center;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "DM Serif Display", serif;
+}
+
+a p {
+  padding: 6px;
+}
+
+#meny p:hover, #categorias:hover {
+  background-color: rgba(245, 141, 77, 0.7568627451);
+  cursor: pointer;
+  border-radius: 10px 10px 0 10px;
+}
+
+#categorias {
+  padding: 4px;
+}
+
+#menyAvPaa:checked ~ #meny {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 82px;
+}
+
+#menyAvPaa:checked ~ #burger > span {
+  background-color: #fff;
+}
+
+#menyAvPaa:checked ~ #burger > span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#menyAvPaa:checked ~ #burger > span:nth-child(2) {
+  opacity: 0;
+}
+
+#menyAvPaa:checked ~ #burger > span:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
+}
+
+#lista {
+  display: none;
+  list-style: none;
+  justify-items: center;
+  gap: 5px;
+  background-color: rgba(255, 255, 255, 0.48);
+  border-radius: 8px;
+}
+
+.lista1024 {
+  display: none;
+  font-family: "DM Serif Display", serif;
+}
+
+#fondo {
+  width: 97vw;
+  height: 300px;
+  position: absolute;
+}
+
+.titulo img {
+  width: 20%;
+  margin: 10px 21px;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo h1 {
+  font-family: "Vollkorn SC", serif;
+  font-size: 2rem;
+}
+
+#subscribeBtn {
+  margin-left: 20px;
+  width: 40px;
+}
+#subscribeBtn:hover {
+  cursor: pointer;
+}
+
+#formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+}
+
+.subscription-form {
+  width: 97vw;
+  position: fixed;
+  top: 280px;
+  transform: translateY(-50%);
+  background-color: rgb(237, 98, 33);
+  transition: left 0.3s ease-in-out;
+  padding: 31px 58px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: none;
+  z-index: 1000;
+}
+.subscription-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.subscription-form h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+.subscription-form #registro {
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+.subscription-form #registro:hover {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+#cerrar {
+  display: none;
+}
+
+#label-cerrar {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 10px;
+  border-style: none;
+  padding: 10px;
+}
+
+input#btnEnviar {
+  width: 200px;
+  margin: auto;
+  padding: 10px 0;
+}
+input#btnEnviar:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#label-cerrar:hover {
+  color: white;
+}
+
+#buscador {
+  position: absolute;
+  right: 31%;
+  top: 178px;
+  z-index: 1;
+}
+#buscador img {
+  width: 25px;
+  position: absolute;
+  right: 10px;
+  bottom: 12%;
+}
+#buscador img:hover {
+  cursor: pointer;
+}
+
+.cards {
+  -moz-column-count: 2;
+       column-count: 2;
+  padding: 10px 0;
+}
+
+.card {
+  width: 39vw;
+  border-color: #000;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 17px;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.acciones p {
+  width: 100%;
+  text-align: left;
+}
+
+.corazon {
+  display: flex;
+  justify-content: flex-end;
+}
+.corazon img:first-child:hover {
+  cursor: pointer;
+}
+.corazon img:nth-child(2) {
+  display: none;
+}
+
+.card > img {
+  width: 40vw;
+}
+
+footer {
+  padding-top: 10px;
+  background-color: #698770;
+  display: flex;
+  flex-direction: column;
+}
+footer > p {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin: 12px 0;
+}
+footer > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+}
+
+.contacto {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacto img {
+  width: 30px;
+}
+.contacto img:hover {
+  cursor: pointer;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.enviar {
+  width: 23px;
+  margin-left: 10px;
+}
+.enviar:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  #fondo {
+    height: 70vh;
+    width: 98vw;
+  }
+  header {
+    height: 70vh;
+  }
+  #burger {
+    display: none;
+  }
+  #menyAvPaa:checked ~ #meny,
+  #meny {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    height: 8vh;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    color: white;
+    position: fixed;
+  }
+  .subscription-form {
+    z-index: 1000;
+    top: 267px;
+    width: 53vw;
+  }
+  .subscription-form form #btnEnviar {
+    margin: 10px auto 0;
+  }
+  .titulo img {
+    width: 70px;
+  }
+  #meny {
+    position: fixed;
+    top: 82px;
+  }
+  .lista1024 {
+    position: fixed;
+    width: 70vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    height: 7vh;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    color: white;
+    z-index: 999;
+    font-size: 1.2rem;
+    top: 130px;
+    justify-content: space-around;
+    margin-left: 16%;
+    background-color: rgba(133, 169, 160, 0.7098039216);
+  }
+  .lista1024 a p:hover {
+    background-color: rgba(245, 141, 77, 0.7568627451);
+    border-radius: 10px 10px 0 10px;
+  }
+  #buscador {
+    right: 31%;
+    top: 330px;
+    width: 40%;
+  }
+  #buscador img {
+    left: 95%;
+    bottom: 20%;
+  }
+  #buscador input {
+    width: 100%;
+  }
+  .acciones p {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .titulo img {
+    width: 100px;
+  }
+  .titulo h1 {
+    font-size: 4rem;
+  }
+  nav {
+    height: 125px;
+  }
+  #meny {
+    top: 125px;
+    height: 53px;
+  }
+  .lista1024 {
+    top: 178px;
+  }
+  #categorias {
+    display: flex;
+  }
+  .categorias a {
+    width: 15%;
+  }
+  .categoria {
+    max-width: 10%;
+    min-width: 100%;
+    height: 20vh;
+    margin: 20px 0;
+  }
+  .categoria:hover p {
+    font-size: 1.5rem;
+  }
+  #menyAvPaa:checked ~ #meny {
+    margin: 0;
+  }
+  #buscardor input {
+    width: 30vw;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .card {
+    width: 25vw;
+    height: 25vw;
+    margin: 20px 10px;
+  }
+  .card > img {
+    width: 25vw;
+    height: 25vw;
+    size: 100%;
+  }
+  .subscription-form {
+    width: 500px;
+    top: 328px;
+  }
+}/*# sourceMappingURL=cocina.css.map */
