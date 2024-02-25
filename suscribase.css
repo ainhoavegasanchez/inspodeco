@@ -377,6 +377,7 @@ footer > div {
   #meny {
     position: fixed;
     top: 82px;
+    height: 53px;
   }
   .categorias {
     display: flex;
