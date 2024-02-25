@@ -43,7 +43,6 @@ header {
   height: 1.5rem;
   display: flex;
   flex-direction: column;
-  top: 20%;
   right: 5%;
   transform: translateY(-50%);
   z-index: 1000;
