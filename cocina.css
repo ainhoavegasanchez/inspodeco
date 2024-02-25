@@ -361,7 +361,7 @@ footer > div {
   }
   .subscription-form {
     z-index: 1000;
-    top: 267px;
+    top: 47vh;
     width: 53vw;
   }
   .subscription-form form #btnEnviar {
