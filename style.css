@@ -307,7 +307,7 @@ input#btnEnviar:hover {
   font-size: 1rem;
 }
 #texto img {
-  width: 65vw;
+  width: 50vw;
   border-radius: 10px;
 }
 
@@ -524,6 +524,9 @@ footer > div {
   }
   #texto img {
     width: 80%;
+  }
+  #texto p {
+    font-size: 2rem;
   }
   .tipos {
     display: grid;
