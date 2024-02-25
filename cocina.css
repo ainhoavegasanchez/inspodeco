@@ -72,7 +72,8 @@ a p {
   padding: 6px;
 }
 
-#meny p:hover, #categorias:hover {
+#meny p:hover,
+#categorias:hover {
   background-color: rgba(245, 141, 77, 0.7568627451);
   cursor: pointer;
   border-radius: 10px 10px 0 10px;
@@ -399,7 +400,7 @@ footer > div {
   }
   #buscador {
     right: 31%;
-    top: 52vh;
+    top: 47vh;
     width: 40%;
   }
   #buscador img {

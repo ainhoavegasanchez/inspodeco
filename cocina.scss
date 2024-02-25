@@ -6,7 +6,7 @@ $fondo_texto: #d7c1a2;
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
 $texto: "DM Serif Display", serif;
 $titulo: "Vollkorn SC", serif;
-$formulario:rgb(237 98 33);
+$formulario: rgb(237 98 33);
 
 * {
   margin: 0;
@@ -78,7 +78,8 @@ a p {
   padding: 6px;
 }
 
-#meny p:hover, #categorias:hover {
+#meny p:hover,
+#categorias:hover {
   background-color: #f58d4dc1;
   cursor: pointer;
   border-radius: 10px 10px 0 10px;
@@ -172,7 +173,7 @@ a p {
   position: fixed;
   top: 280px;
   transform: translateY(-50%);
-  background-color:$formulario;
+  background-color: $formulario;
   transition: left 0.3s ease-in-out;
   padding: 31px 58px;
   box-sizing: border-box;
@@ -227,7 +228,6 @@ input#btnEnviar {
   }
 }
 
-
 #label-cerrar:hover {
   color: white;
 }
@@ -250,7 +250,6 @@ input#btnEnviar {
   }
 }
 
-
 .cards {
   column-count: 2;
   padding: 10px 0;
@@ -268,7 +267,7 @@ input#btnEnviar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  &  p {
+  & p {
     width: 100%;
     text-align: left;
   }
@@ -288,7 +287,6 @@ input#btnEnviar {
 .card > img {
   width: 40vw;
 }
-
 
 footer {
   padding-top: 10px;
@@ -386,7 +384,7 @@ footer {
     position: fixed;
     top: 82px;
     height: 53px;
-}
+  }
 
   .lista1024 {
     position: fixed;
@@ -414,7 +412,7 @@ footer {
 
   #buscador {
     right: 31%;
-    top: 52vh;
+    top: 47vh;
     width: 40%;
     & img {
       left: 87%;
@@ -431,7 +429,6 @@ footer {
 }
 
 @media (min-width: 1024px) {
-
   .titulo img {
     width: 100px;
   }
