@@ -417,6 +417,9 @@ footer {
       border-radius: 10px 10px 0 10px;
     }
   }
+  #texto p{
+    font-size: 2rem;
+  }
 }
 
 /************************************/
@@ -445,9 +448,7 @@ footer {
       width: 80%;
     }
   }
-  #texto p{
-    font-size: 2rem;
-  }
+
   .tipos {
     display: grid;
     grid-template-columns: 1fr 1fr;
